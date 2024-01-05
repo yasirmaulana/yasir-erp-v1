@@ -1,0 +1,28 @@
+app:
+  welcome-text: hello wkwkwkwk adkasfjadfl kasdfjasdk
+cloud:
+  api-key: ${CLOUD_KEY}
+server:
+  port: 9090
+
+#spring datasource
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/erp
+    username: ${username}
+    password: ${password}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 60000
+      idle-timeout: 60000
+      max-lifetime: 1800000
+      maximum-pool-size: 10
+
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
